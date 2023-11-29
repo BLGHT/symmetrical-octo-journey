@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Request;
 
+use function Termwind\render;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,12 @@ Route::get('/ssti', function (Request $request) {
     if($request->has('command')) {
         $command = $request->get('command');
     }
+
+    //dd($request->get('command'));
+
+    $html = '<h1>' . $command . '</h1>';
+
+    //return view('test', ['html' => $html]);
     
     return view('ssti')->with('command', $command);
 });
