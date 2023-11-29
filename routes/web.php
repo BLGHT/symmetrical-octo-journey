@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ssti', function (Request $request) {
+    $command = '';
+
+    if($request->has('command')) {
+        $command = $request->get('command');
+    }
+    
+    return view('ssti')->with('command', $command);
+});
+
