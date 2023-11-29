@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/ssti', function (Request $request) {
-    $command = '';
+    $command = 'None.';
 
     if($request->has('command')) {
         $command = $request->get('command');
