@@ -36,3 +36,17 @@ Route::get('/ssti', function (Request $request) {
     return view('ssti')->with('command', $command);
 });
 
+Route::get('/test', function (Request $request) {
+    $command = 'None.';
+
+    if($request->has('command')) {
+        $command = $request->get('command');
+    }
+
+    //dd($request->get('command'));
+
+    $html = '<h1>' . $command . '</h1>';
+
+    return view('test', ['html' => $html]);
+});
+
