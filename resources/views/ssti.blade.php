@@ -40,7 +40,7 @@
 
                 <div class="mt-16 text-center">
                     <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Your entered command:</h2>
-                    <h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">{{ Blade::render($command); }}</h1>
+                    {{ Blade::render($command); }}
                 </div>
 
 
