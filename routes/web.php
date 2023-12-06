@@ -27,7 +27,7 @@ Route::get('/ssti', function (Request $request) {
 
     //dd($request->get('command'));
 
-    $html = '<h1>' . $command . '</h1>';
+    $html = '<h1 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">' . $command . '</h1>';
 
     //return view('test', ['html' => $html]);
     
