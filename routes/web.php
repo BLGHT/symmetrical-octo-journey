@@ -24,12 +24,6 @@ Route::get('/ssti', function (Request $request) {
     if($request->has('command')) {
         $command = $request->get('command');
     }
-
-    //dd($request->get('command'));
-
-    $html = '<h2 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">' . $command . '</h2>';
-
-    //return view('test', ['html' => $html]);
     
     return view('ssti')->with('command', $command);
 });
