@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Request;
 
-use function Termwind\render;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
